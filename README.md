@@ -197,6 +197,7 @@ nslookup -qt="mx" a.b.com 1.1.1.1
 ```
 进行验证。 
 
+# deploy test
 ## 加入社区
 
 - [Telegram](https://t.me/cloudflare_temp_email)
