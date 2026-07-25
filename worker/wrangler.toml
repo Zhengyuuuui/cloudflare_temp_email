@@ -1,0 +1,40 @@
+name = "cloudflare-temp-email"
+
+main = "src/worker.ts"
+
+compatibility_date = "2025-04-01"
+
+compatibility_flags = [
+  "nodejs_compat"
+]
+
+keep_vars = true
+
+
+[vars]
+
+PREFIX = "tmp"
+
+DEFAULT_DOMAINS = [
+  "school-service.online"
+]
+
+DOMAINS = [
+  "school-service.online"
+]
+
+ENABLE_USER_CREATE_EMAIL = true
+
+ENABLE_USER_DELETE_EMAIL = true
+
+
+JWT_SECRET = "请替换成你的随机字符串"
+
+
+[[d1_databases]]
+
+binding = "DB"
+
+database_name = "你的D1数据库名称"
+
+database_id = "你的D1数据库ID"
