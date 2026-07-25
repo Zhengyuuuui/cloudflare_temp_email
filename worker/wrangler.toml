@@ -35,6 +35,6 @@ JWT_SECRET = "请替换成你的随机字符串"
 
 binding = "DB"
 
-database_name = "你的D1数据库名称"
+database_name = "cloudflare-temp-email"
 
-database_id = "你的D1数据库ID"
+database_id = "32c6f856-2079-48bc-a618-4bd318364637"
