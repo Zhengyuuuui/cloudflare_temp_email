@@ -35,7 +35,7 @@ jobs:
           ls -la
           ls -la dist
 
-            - name: Deploy to HuggingFace Space
+      - name: Deploy to HuggingFace Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
