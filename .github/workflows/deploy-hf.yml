@@ -40,7 +40,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git clone https://huggingface.co/spaces/你的HF用户名/cloudflare-temp-email-ui hf-space
+          git clone https://huggingface.co/spaces/realyuYU/cloudflare-temp-email-ui hf-space
           cp -r frontend/dist/* hf-space/
           cd hf-space
           git config user.email "github-actions@github.com"
