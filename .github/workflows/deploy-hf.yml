@@ -35,20 +35,24 @@ jobs:
           ls -la
           ls -la dist
 
-      - name: Deploy to HuggingFace Space
+            - name: Deploy to HuggingFace Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git clone https://huggingface.co/spaces/realyuYU/cloudflare-temp-email-ui hf-space
 
-          cp -r dist/* hf-space/
-
           cd hf-space
+
+          git lfs install
+          git lfs track "*.wasm"
+
+          cp -r ../dist/* .
 
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
 
           git add .
+          git add .gitattributes
 
           git commit -m "Deploy from GitHub Actions" || exit 0
 
